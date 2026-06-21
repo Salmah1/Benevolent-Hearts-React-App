@@ -277,6 +277,12 @@ Main landing page featuring services, campaigns, and contact information.
 
 ![Home Screen](screenshots/home-screen.png)
 
+### Donation Page
+
+View information about charitable giving and submit donation enquiries to support Benevolent Hearts initiatives.
+
+![Donation Page](screenshots/donation-screen.png)
+
 ### Product Catalogue
 
 Browse handmade products that support charitable initiatives.
