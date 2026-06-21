@@ -211,7 +211,7 @@ benevolent-hearts/
 ```bash
 git clone https://github.com/Salmah1/Benevolent-Hearts-React-App.git
 
-cd benevolent-hearts
+cd Benevolent-Hearts
 ```
 
 ### Install Dependencies
