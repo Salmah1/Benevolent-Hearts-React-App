@@ -2,7 +2,7 @@
 
 ## Overview
 
-Benevolent Hearts is a full-stack charity platform developed using React, Node.js, Express, and MongoDB. The application enables users to support charitable initiatives through donations, volunteering opportunities, and the purchase of handmade products.
+Benevolent Hearts is a full-stack charity platform developed using React, Node.js, Express, MongoDB Atlas, and Cloudinary. The application is deployed using Netlify and Render, enabling users to support charitable initiatives through donations, volunteering opportunities, and the purchase of handmade products. The application enables users to support charitable initiatives through donations, volunteering opportunities, and the purchase of handmade products.
 
 The platform is divided into three core areas:
 
@@ -34,6 +34,7 @@ Users can:
 - View and update profile information
 - Change account details and password
 - Show or hide password fields during authentication
+- Upload and manage profile pictures using Cloudinary
 
 ### Product Catalogue
 
@@ -82,6 +83,13 @@ Users can:
 - Send general enquiries
 - Request information about volunteering and fundraising
 
+### Authentication & Security
+
+- JWT-based authentication
+- Protected routes for authenticated users
+- Password hashing using Bcrypt.js
+- User profile management
+
 ### Responsive Design
 
 The application supports:
@@ -110,17 +118,22 @@ The application supports:
 
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB Atlas
 - Mongoose
 - JWT Authentication
-- Multer (File Uploads)
+- Passport JWT
+- Bcrypt.js
+- Cloudinary
+- Express Form Data
 
 ### Other Tools
 
 - Fetch API
-- FormData
 - Context API
 - Local Storage
+- Git & GitHub
+- Netlify (Frontend Deployment)
+- Render (Backend Deployment)
 
 ---
 
@@ -133,6 +146,7 @@ benevolent-hearts/
 │   │
 │   ├── public/
 │   │   ├── img/
+│   │   ├── _redirects
 │   │   └── index.html
 │   │
 │   ├── src/
@@ -204,7 +218,8 @@ benevolent-hearts/
 
 - Node.js
 - npm
-- MongoDB
+- MongoDB Atlas Account
+- Cloudinary Account
 
 ### Clone the Repository
 
@@ -235,14 +250,18 @@ npm install
 Create a `.env` file in the frontend folder:
 
 ```env
-REACT_APP_BACKEND_ENDPOINT=http://localhost:5000
+REACT_APP_BACKEND_ENDPOINT=http://localhost:3001
 ```
 
 Create a `.env` file in the backend folder:
 
 ```env
-MONGODB_URI=your_mongodb_connection_string
+DB_URL=your_mongodb_atlas_connection_string
 JWT_SECRET=your_secret_key
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+PORT=3001
 ```
 
 ### Running the Project
