@@ -4,6 +4,10 @@ const cloudinary = require("cloudinary").v2;
 
 const ProductModel = require("../models/ProductModel");
 
+router.get("/ping", (req, res) => {
+  res.send("products route working");
+});
+
 // products/add
 router.post("/add", async function (req, res) {
   try {
