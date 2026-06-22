@@ -37,9 +37,10 @@ const ProductListScreen = () => {
   // }, []);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/products/list`, {
-      method: "POST",
-    })
+    // fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/products/list`, {
+    //   method: "POST",
+    // })
+    fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/products/list`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Products:", data);

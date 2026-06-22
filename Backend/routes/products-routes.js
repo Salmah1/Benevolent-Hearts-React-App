@@ -57,12 +57,27 @@ router.post("/add", async function (req, res) {
 });
 
 // products/list
-router.post("/list", function (req, res) {
-  ProductModel.find(req.query)
+// router.post("/list", function (req, res) {
+//   ProductModel.find(req.query)
+//     .then(function (dbDocument) {
+//       res.json(dbDocument);
+//     })
+//     .catch(function () {
+//       res.status(500).json({
+//         status: "not ok",
+//         message: "Something went wrong",
+//       });
+//     });
+// });
+
+router.get("/list", function (req, res) {
+  ProductModel.find({})
     .then(function (dbDocument) {
       res.json(dbDocument);
     })
-    .catch(function () {
+    .catch(function (error) {
+      console.error(error);
+
       res.status(500).json({
         status: "not ok",
         message: "Something went wrong",
