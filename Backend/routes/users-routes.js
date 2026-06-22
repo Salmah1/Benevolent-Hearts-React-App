@@ -44,7 +44,7 @@ router.post("/register", function (req, res) {
             files[0].path,
           );
 
-          formData.avatar = cloudinaryResult.url;
+          formData.avatar = cloudinaryResult.secure_url;
         } catch (error) {
           return res.status(500).json({
             status: "not ok",
