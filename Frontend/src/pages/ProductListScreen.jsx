@@ -23,12 +23,26 @@ const ProductListScreen = () => {
   const [sortOption, setSortOption] = useState("");
 
   // Fetch products when the component loads
+  // useEffect(() => {
+  //   fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/products/list`, {
+  //     method: "POST",
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProducts(data);
+  //     })
+  //     .catch(() => {
+  //       alert("Unable to load products. Please try again.");
+  //     });
+  // }, []);
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/products/list`, {
       method: "POST",
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("Products:", data);
         setProducts(data);
       })
       .catch(() => {
