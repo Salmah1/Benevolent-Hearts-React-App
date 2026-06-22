@@ -79,7 +79,14 @@ function DonateScreen() {
             component={RouterLink}
             to="/login"
             variant="contained"
-            sx={buttonStyle}
+            sx={{
+              ...buttonStyle,
+              color: "#fff",
+
+              "&:hover": {
+                color: "#fff",
+              },
+            }}
           >
             Login
           </Button>
