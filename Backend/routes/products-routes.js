@@ -4,10 +4,6 @@ const cloudinary = require("cloudinary").v2;
 
 const ProductModel = require("../models/ProductModel");
 
-router.get("/ping", (req, res) => {
-  res.send("products route working");
-});
-
 // products/add
 router.post("/add", async function (req, res) {
   try {
@@ -55,20 +51,6 @@ router.post("/add", async function (req, res) {
     });
   }
 });
-
-// products/list
-// router.post("/list", function (req, res) {
-//   ProductModel.find(req.query)
-//     .then(function (dbDocument) {
-//       res.json(dbDocument);
-//     })
-//     .catch(function () {
-//       res.status(500).json({
-//         status: "not ok",
-//         message: "Something went wrong",
-//       });
-//     });
-// });
 
 router.get("/list", function (req, res) {
   ProductModel.find({})
