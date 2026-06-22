@@ -77,12 +77,13 @@ function ProductScreen() {
 
   // Fetch all products for the related products section
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/products/list`, {
-      method: "POST",
-    })
+    fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/products/list`)
       .then((res) => res.json())
       .then((products) => {
         setAllProducts(products);
+      })
+      .catch((error) => {
+        console.error(error);
       });
   }, []);
 
