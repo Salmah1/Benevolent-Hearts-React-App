@@ -35,7 +35,7 @@ router.post("/add", async function (req, res) {
 
       const cloudinaryResult = await cloudinary.uploader.upload(files[0].path);
 
-      newDocument.productImage = cloudinaryResult.url;
+      newDocument.productImage = cloudinaryResult.secure_url;
     }
 
     const createdDocument = await ProductModel.create(newDocument);

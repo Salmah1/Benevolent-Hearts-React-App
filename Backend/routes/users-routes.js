@@ -224,7 +224,7 @@ router.put(
           files[0].path,
         );
 
-        updates.avatar = cloudinaryResult.url;
+        updates.avatar = cloudinaryResult.secure_url;
       }
 
       const dbDocument = await UserModel.findByIdAndUpdate(
