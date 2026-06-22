@@ -53,7 +53,7 @@ router.post("/add", async function (req, res) {
 });
 
 // products/list
-router.post("/list", function (req, res) {
+router.get("/list", function (req, res) {
   ProductModel.find(req.query)
     .then(function (dbDocument) {
       res.json(dbDocument);
