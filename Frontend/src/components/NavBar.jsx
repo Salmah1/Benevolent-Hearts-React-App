@@ -94,11 +94,12 @@ function NavBar() {
               flexShrink: 0,
             }}
           >
-            <img
+            <Box
+              component="img"
               src="/img/bh.png"
               alt="Benevolent Hearts"
-              style={{
-                height: "55px",
+              sx={{
+                height: { xs: 38, md: 55 },
                 cursor: "pointer",
               }}
             />
@@ -250,8 +251,8 @@ function NavBar() {
                   alt="avatar"
                   src={avatar}
                   sx={{
-                    width: 42,
-                    height: 42,
+                    width: { xs: 32, lg: 42 },
+                    height: { xs: 32, lg: 42 },
                     border: "2px solid #e9ecef",
                     boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
                   }}
